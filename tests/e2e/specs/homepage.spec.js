@@ -1,12 +1,12 @@
-import { Browser } from "selenium-webdriver";
+//import { Browser } from "selenium-webdriver";
 
 describe('Homepage', function() {
     it('perform a search into the api page', function() {
         browser.get('#/api');
+        
+        element(by.css('#searchInput')).sendKeys('restart');
+        element(by.css('.depth-1')).click();
 
-        Element(by.model('searchTerm')).sendKeys('restart');
-        Element(by.css('.depth-1')).click();
-
-        expect(Element(by.css('.api-title')).getText()).toContain('browser.restart');
+        expect(element(by.css('.api-title')).getText()).toContain('browser.restart');
     });
 });

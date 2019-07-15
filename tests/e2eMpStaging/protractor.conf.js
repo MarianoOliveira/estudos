@@ -4,5 +4,5 @@ module.exports.config = {
         'browserName': 'chrome'
     },
     specs: ['specs/*.spec.js'],
-    baseUrl: 'http://www.protractortest.org/'
+    baseUrl: 'https://beta.mbeta.info/'
 };
