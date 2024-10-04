@@ -11,6 +11,5 @@
     "required": [
         "message",
         "authorization"
-    ],
-    "additionalProperties": false
+    ]
 }

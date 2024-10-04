@@ -7,6 +7,5 @@
     },
     "required": [
         "message"
-    ],
-    "additionalProperties": false
+    ]
 }

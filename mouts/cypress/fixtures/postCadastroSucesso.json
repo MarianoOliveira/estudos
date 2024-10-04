@@ -11,6 +11,5 @@
   "required": [
       "message",
       "_id"
-  ],
-  "additionalProperties": false
+  ]
 }
