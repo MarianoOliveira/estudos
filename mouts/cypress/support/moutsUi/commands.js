@@ -25,3 +25,11 @@ Cypress.Commands.add('PostLogin', (email, pass, fail) => {
         failOnStatusCode: fail
     });
 });
+
+Cypress.Commands.add('GetProdutos', (fail) => {
+    cy.request({
+        url: 'https://serverest.dev/produtos',
+        method: 'GET',
+        failOnStatusCode: fail
+    });
+});

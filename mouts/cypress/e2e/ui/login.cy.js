@@ -21,9 +21,7 @@ describe('Login', () => {
             });
         });
     });
-});
 
-describe('Login', () => {
     it('Login com falha - 401', () => {
         cy.PostLogin(faker.internet.email(), faker.internet.password(), false).then((resp) => {
             expect(resp.status).to.eq(401);
