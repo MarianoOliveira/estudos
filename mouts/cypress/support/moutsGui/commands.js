@@ -31,3 +31,19 @@ Cypress.Commands.add('validarLogin',  () => {
     cy.get('h4').should('contain.text', 'Produtos').should('be.visible');
     cy.get(':nth-child(1) > .row').should('be.visible');
 });
+
+Cypress.Commands.add('AddaLista',  () => {
+    cy.get(':nth-child(1) > .card-body > div > [href="/minhaListaDeProdutos"] > [data-testid="adicionarNaLista"]').click();
+    cy.get('[data-testid="home"]').click();
+    cy.get('[href="/detalhesProduto/1uDzhkUSwHzmjuRt"] > .card-link').click();
+    cy.get('[data-testid="adicionarNaLista"]').click();
+});
+
+Cypress.Commands.add('validarLista',  () => {
+    cy.get('h1').should('contain.text', 'Lista de Compras').should('be.visible');
+    cy.get('[data-testid="shopping-cart-product-name"]').should('have.length', 2);
+});
+
+Cypress.Commands.add('limparLista',  () => {
+    cy.get('[data-testid="limparLista"]').click();
+});
