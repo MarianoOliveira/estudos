@@ -4,17 +4,12 @@ const Ajv = require("ajv")
 const ajv = new Ajv() // options can be passed, e.g. {allErrors: true}
 import { faker } from '@faker-js/faker';
 
-describe('Cadastro', () => {
-    it('Cadastro com sucesso - 201', () => {
-        cy.PostUsuarios(
-            faker.person.fullName(),
-            faker.internet.email(),
-            faker.internet.password(),
-            true
-        ).then((resp) => {
-            expect(resp.status).to.eq(201);
+describe('Login', () => {
+    it('Login com sucesso - 200', () => {
+        cy.PostLogin('mariano@mailinator.com', 'teste123', true).then((resp) => {
+            expect(resp.status).to.eq(200);
 
-            cy.fixture('cadastroSucesso.json').then((schema) => {
+            cy.fixture('loginSucesso.json').then((schema) => {
                 const validate = ajv.compile(schema);
                 const valid = validate(resp.body);
 
@@ -26,17 +21,14 @@ describe('Cadastro', () => {
             });
         });
     });
+});
 
-    it('Cadastro com falha - 400', () => {
-        cy.PostUsuarios(
-            faker.person.fullName(),
-            'mariano@mailinator.com',
-            faker.internet.password(),
-            false
-        ).then((resp) => {
-            expect(resp.status).to.eq(400);
+describe('Login', () => {
+    it('Login com falha - 401', () => {
+        cy.PostLogin(faker.internet.email(), faker.internet.password(), false).then((resp) => {
+            expect(resp.status).to.eq(401);
 
-            cy.fixture('cadastroFalha.json').then((schema) => {
+            cy.fixture('loginFalha.json').then((schema) => {
                 const validate = ajv.compile(schema);
                 const valid = validate(resp.body);
 
