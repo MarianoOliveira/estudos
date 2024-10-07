@@ -8,7 +8,7 @@ Cypress.Commands.add('PostUsuarios', (name, email, pass, fail) => {
             nome: name,
             email: email,
             password: pass,
-            administrador: "false"
+            administrador: 'false'
         },
         failOnStatusCode: fail
     });

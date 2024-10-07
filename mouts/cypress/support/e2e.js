@@ -1,2 +1,2 @@
-import './moutsGui/commands'
-import './moutsApi/commands'
+import './moutsGui/commands';
+import './moutsApi/commands';

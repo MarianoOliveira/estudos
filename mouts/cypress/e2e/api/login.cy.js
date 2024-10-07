@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
-const Ajv = require("ajv")
-const ajv = new Ajv() // options can be passed, e.g. {allErrors: true}
+const Ajv = require('ajv');
+const ajv = new Ajv(); // options can be passed, e.g. {allErrors: true}
 import { faker } from '@faker-js/faker';
 
 describe('Login', () => {
