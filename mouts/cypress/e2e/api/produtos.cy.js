@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
-const Ajv = require("ajv")
-const ajv = new Ajv() // options can be passed, e.g. {allErrors: true}
+const Ajv = require('ajv');
+const ajv = new Ajv(); // options can be passed, e.g. {allErrors: true}
 
 describe('Produtos', () => {
     it('Carregar lista de produtos - 200', () => {
@@ -17,7 +17,7 @@ describe('Produtos', () => {
                 } else {
                     cy.log('Falha na validação do schema:', validate.errors);
                 }
-            })
+            });
         });
     });
 });
