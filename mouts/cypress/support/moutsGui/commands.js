@@ -15,8 +15,7 @@ Cypress.Commands.add('cadastro',  () => {
 });
 
 Cypress.Commands.add('validarCadastro',  () => {
-    cy.get('.alert').should('be.visible');
-    cy.get('.alert').should('contain.text', 'Cadastro realizado com sucesso');
+    cy.get('.alert').should('be.visible').should('contain.text', 'Cadastro realizado com sucesso');
 });
 
 Cypress.Commands.add('logar', (email, pass) => {
