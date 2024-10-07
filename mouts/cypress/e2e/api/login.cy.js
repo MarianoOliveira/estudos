@@ -6,10 +6,10 @@ import { faker } from '@faker-js/faker';
 
 describe('Login', () => {
     it('Login com sucesso - 200', () => {
-        cy.PostLogin('mariano@mailinator.com', 'teste123', true).then((resp) => {
+        cy.PostLogin('fulano@qa.com', 'teste', true).then((resp) => {
             expect(resp.status).to.eq(200);
 
-            cy.fixture('loginSucesso.json').then((schema) => {
+            cy.fixture('postLoginSucesso.json').then((schema) => {
                 const validate = ajv.compile(schema);
                 const valid = validate(resp.body);
 
@@ -26,7 +26,7 @@ describe('Login', () => {
         cy.PostLogin(faker.internet.email(), faker.internet.password(), false).then((resp) => {
             expect(resp.status).to.eq(401);
 
-            cy.fixture('loginFalha.json').then((schema) => {
+            cy.fixture('postLoginFalha.json').then((schema) => {
                 const validate = ajv.compile(schema);
                 const valid = validate(resp.body);
 
