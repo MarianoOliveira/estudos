@@ -25,7 +25,7 @@ describe('Cadastro', () => {
                 }
             });
         });
-    });
+    })
 
     it('Cadastro com falha - 400', () => {
         cy.PostUsuarios(
