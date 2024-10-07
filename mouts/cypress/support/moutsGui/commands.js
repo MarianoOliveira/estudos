@@ -35,7 +35,7 @@ Cypress.Commands.add('validarLogin',  () => {
 Cypress.Commands.add('AddaLista',  () => {
     cy.get(':nth-child(1) > .card-body > div > [href="/minhaListaDeProdutos"] > [data-testid="adicionarNaLista"]').click();
     cy.get('[data-testid="home"]').click();
-    cy.get('[href="/detalhesProduto/1uDzhkUSwHzmjuRt"] > .card-link').click();
+    cy.get(':nth-child(3) > .card-body > :nth-child(1) > .imagem').click();
     cy.get('[data-testid="adicionarNaLista"]').click();
 });
 

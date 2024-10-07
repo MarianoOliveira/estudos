@@ -21,7 +21,6 @@
         "indent": ["error", 4], // Use 4 espaços para indentação
         "quotes": ["error", "single"], // Use aspas simples
         "semi": ["error", "always"], // Sempre use ponto e vírgula
-        "linebreak-style": ["error", "unix"], // Use quebras de linha Unix (LF)
         "no-console": "warn", // Avisar sobre console.log, mas não proibir
         "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }], // Avisar sobre variáveis não utilizadas, mas ignorar variáveis começando com _
         "eol-last": ["error", "always"] // Sempre tenha uma nova linha no final do arquivo

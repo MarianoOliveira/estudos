@@ -14,7 +14,7 @@ describe('Cadastro', () => {
         ).then((resp) => {
             expect(resp.status).to.eq(201);
 
-            cy.fixture('cadastroSucesso.json').then((schema) => {
+            cy.fixture('postCadastroSucesso.json').then((schema) => {
                 const validate = ajv.compile(schema);
                 const valid = validate(resp.body);
 
@@ -36,7 +36,7 @@ describe('Cadastro', () => {
         ).then((resp) => {
             expect(resp.status).to.eq(400);
 
-            cy.fixture('cadastroFalha.json').then((schema) => {
+            cy.fixture('postCadastroFalha.json').then((schema) => {
                 const validate = ajv.compile(schema);
                 const valid = validate(resp.body);
 
