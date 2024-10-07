@@ -1,0 +1,4 @@
+# Ignorar o arquivo de configuração do Cypress
+cypress.config.js
+node_modules/
+package.json
