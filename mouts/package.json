@@ -14,5 +14,10 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
   }
 }
