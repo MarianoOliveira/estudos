@@ -30,7 +30,7 @@ describe('Cadastro', () => {
     it('Cadastro com falha - 400', () => {
         cy.PostUsuarios(
             faker.person.fullName(),
-            'mariano@mailinator.com',
+            'fulano@qa.com',
             faker.internet.password(),
             false
         ).then((resp) => {
