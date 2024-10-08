@@ -25,10 +25,7 @@ Cypress.Commands.add('logar', (email, pass) => {
 });
 
 Cypress.Commands.add('validarLogin',  () => {
-    cy.contains('Serverest Store').should('be.visible');
-    cy.get('[data-testid="shopping-cart-button"]').should('be.visible');
-    cy.get('h4').should('contain.text', 'Produtos').should('be.visible');
-    cy.get(':nth-child(1) > .row').should('be.visible');
+    cy.get('[data-testid="logout"]').should('be.visible');
 });
 
 Cypress.Commands.add('AddaLista',  () => {

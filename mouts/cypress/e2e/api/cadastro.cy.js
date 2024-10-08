@@ -24,8 +24,8 @@ describe('Cadastro', () => {
                     cy.log('Falha na validação do schema:', validate.errors);
                 }
             });
-        })
-    })
+        });
+    });
 
     it('Cadastro com falha - 400', () => {
         cy.PostUsuarios(
